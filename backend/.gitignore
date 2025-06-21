@@ -1,0 +1,26 @@
+# Python bytecode and cache
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE and editor configuration
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Testing artifacts
+.pytest_cache/
+.coverage
+
+# Build and distribution artifacts
+build/
+dist/
+
+# Instance folder (common in Flask)
+instance/
