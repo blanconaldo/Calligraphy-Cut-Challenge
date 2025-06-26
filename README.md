@@ -1,5 +1,5 @@
 # Calligraphy Cut Challenge
-
+![img.png](img.png)
 A modern web application for showcasing and working with Calligraphy Cut styles and techniques. This project demonstrates a full-stack implementation with React frontend and Python backend, fully containerized with Docker.
 
 ## 🚀 Tech Stack
