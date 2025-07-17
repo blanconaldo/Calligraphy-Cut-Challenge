@@ -42,7 +42,7 @@ jobs:
           registryPassword: ${{ secrets.BACKENDCALLIGRAPHYCUTCHATBOT_REGISTRY_PASSWORD }}
           containerAppName: backend-calligraphy-cut-chatbot
           resourceGroup: Calligraphy-Cut-Chatbot
-          imageToBuild: calligraphycut-a2btbeahg5dwbvdq.azurecr.io/backend-calligraphy-cut-chatbot:${{ github.sha }}
+          imageToBuild: calligraphycut-a2btbeahg5dwbvdq.azurecr.io/backend-calligraphy-cut-chatbot:latest
           _buildArgumentsKey_: |
             _buildArgumentsValues_
 
