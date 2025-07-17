@@ -1,4 +1,4 @@
-# Calligraphy Cut Challenge
+# Calligraphy Cut Chatbot
 ![img.png](img.png)
 A modern web application for showcasing and working with Calligraphy Cut styles and techniques. This project demonstrates a full-stack implementation with React frontend and Python backend, fully containerized with Docker.
 
@@ -17,9 +17,33 @@ A modern web application for showcasing and working with Calligraphy Cut styles 
 ### Infrastructure
 - **Docker** - Containerization for consistent environments
 - **Docker Compose** - Multi-container orchestration
+- **Azure Container Apps** - Cloud hosting for containerized applications
+- **Azure Container Registry** - Private registry for Docker images
+- **GitHub Actions** - CI/CD automation
 
 ### Important Note
 **Groq API was used instead of OPENAI's API KEY because the former is entirely for free and was better for demonstration purposes but the same method is used for connecting any of them**
+
+## ☁️ Azure Deployment
+
+This application is deployed on Azure using container-based services:
+
+### Architecture
+- **Azure Container Registry** stores Docker images for both frontend and backend services
+- **Azure Container Apps** runs the containerized applications in a managed environment
+- **GitHub Actions** provides CI/CD pipelines for automated deployments
+
+### CI/CD Pipeline
+The repository includes GitHub Actions workflows that automatically:
+1. Build new Docker images when changes are pushed to the main branch
+2. Push these images to Azure Container Registry with the "latest" tag
+3. Update the corresponding Container Apps to use the newly built images
+
+This ensures that any modifications to the codebase are automatically deployed to the live environment without manual intervention.
+
+### Live Demo
+You can access the live application at:
+[Frontend Application](https://frontend-calligraphy-cut-chatbot.kindpebble-7abcd71b.germanywestcentral.azurecontainerapps.io)
 
 ## 📦 Installation
 
@@ -31,10 +55,10 @@ The fastest way to get started with zero configuration:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/calligraphy-cut-challenge.git
+git clone https://github.com/blanconaldo/calligraphy-cut-chatbot.git
 
 # Navigate to project directory
-cd calligraphy-cut-challenge
+cd calligraphy-cut-chatbot
 
 # Create .env file for GROQ API key (in backend directory)
 echo "GROQ_API_KEY=your_api_key_here" > backend/.env
@@ -51,10 +75,10 @@ The application will be available at:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/calligraphy-cut-challenge.git
+git clone https://github.com/blanconaldo/calligraphy-cut-chatbot.git
 
 # Navigate to project directory
-cd calligraphy-cut-challenge
+cd calligraphy-cut-chatbot
 
 # Frontend setup
 cd frontend
