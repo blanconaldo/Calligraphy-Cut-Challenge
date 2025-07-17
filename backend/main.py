@@ -15,7 +15,10 @@ app = FastAPI()
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://frontend-calligraphy-cut-chatbot.kindpebble-7abcd71b.germanywestcentral.azurecontainerapps.io"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -48,7 +51,7 @@ class ChatResponse(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"status": "ok", "message": "Simple Groq chatbot API is running"}
+    return {"status": "ok", "message": "Groq chatbot API is running"}
 
 
 # Define the chat endpoint
