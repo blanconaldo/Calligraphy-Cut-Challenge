@@ -3,8 +3,8 @@ import { useAuth } from '../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import CalligraphyLogo from '../assets/Calligraphy_Cut_Logo.png';
 
-//  || 'http://localhost:8001'
-const API_URL = import.meta.env.VITE_API_URL;
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8001';
 const API_CHAT_ENDPOINT = `${API_URL}/api/chat`;
 
 // You'll need to install this for safe HTML rendering
