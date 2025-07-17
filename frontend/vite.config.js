@@ -5,18 +5,15 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    port: 5173
+    port: 5173,
+    strictPort: true,
+    // Allow any host to access the application
+    allowedHosts: true // Changed from 'all' to true
   },
-  // Add this section to allow your Render hostname
   preview: {
     host: '0.0.0.0',
-    port: 5173
-  },
-  // Add the allowed hosts configuration
-    // Add your Render domain to allowed hosts
-    allowedHosts: [
-      'calligraphy-cut-challenge.onrender.com',
-      'localhost',
-      '127.0.0.1'
-    ]
-  })
+    port: 5173,
+    // Also allow any host in preview mode
+    allowedHosts: true // Changed from 'all' to true
+  }
+})

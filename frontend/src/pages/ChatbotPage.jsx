@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
-// Import just what you need - this is safer than the full package
 import CalligraphyLogo from '../assets/Calligraphy_Cut_Logo.png';
+
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8001';
+const API_CHAT_ENDPOINT = `${API_URL}/api/chat`;
 
 // You'll need to install this for safe HTML rendering
 // pnpm add react-markdown rehype-sanitize
@@ -57,7 +60,7 @@ const ChatbotPage = () => {
 
     try {
       // Send to backend API
-      const response = await fetch('http://localhost:8001/api/chat', {
+      const response = await fetch(API_CHAT_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
