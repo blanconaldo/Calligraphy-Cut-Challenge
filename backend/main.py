@@ -52,7 +52,7 @@ class ChatResponse(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {"status": "ok", "message": "Groq chatbot API is running"}
+    return {"status": "ok", "message": "Groq chatbot API is running now"}
 
 
 # Define the chat endpoint

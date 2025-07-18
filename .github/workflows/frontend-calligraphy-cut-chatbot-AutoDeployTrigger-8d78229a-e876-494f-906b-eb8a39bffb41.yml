@@ -43,9 +43,10 @@ jobs:
           containerAppName: frontend-calligraphy-cut-chatbot
           resourceGroup: Calligraphy-Cut-Chatbot
           imageToBuild: calligraphycut-a2btbeahg5dwbvdq.azurecr.io/frontend-calligraphy-cut-chatbot:latest
-          _buildArgumentsKey_: |
-            _buildArgumentsValues_
           buildArguments: |
             VITE_API_URL=https://backend-calligraphy-cut-chatbot.kindpebble-7abcd71b.germanywestcentral.azurecontainerapps.io
+            buildOptions: "--no-cache"
+            environmentVariables: |
+              - VITE_API_URL=https://backend-calligraphy-cut-chatbot.kindpebble-7abcd71b.germanywestcentral.azurecontainerapps.io
 
 
